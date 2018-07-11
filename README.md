@@ -11,9 +11,9 @@ npm install --save print-diff
 ## Usage
 
 ```javascript
-var printDiff = require('print-diff');
+const printDiff = require('print-diff')
 
-printDiff('Hello\nLinus', 'Hello\nworld');
+printDiff('Hello\nLinus', 'Hello\nworld')
 ```
 
 ![Output](/example-unified.png?raw=true)
@@ -21,9 +21,9 @@ printDiff('Hello\nLinus', 'Hello\nworld');
 ---
 
 ```javascript
-var printDiff = require('print-diff');
+const printDiff = require('print-diff')
 
-printDiff.inline('The quick pink fox', 'The quick brown fox');
+printDiff.inline('The quick pink fox', 'The quick brown fox')
 ```
 
 ![Output](/example-inline.png?raw=true)
