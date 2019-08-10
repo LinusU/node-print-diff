@@ -39,7 +39,7 @@ describe('printDiff.unified', function () {
 
   var result = (
     '\n' + A('+ expected') + ' ' + R('- actual') + '\n' +
-    '\n' + ' Hello\n' + A('+world') + '\n' + R('-Linus') + '\n\n'
+    '\n' + ' Hello\n' + R('-Linus') + '\n' + A('+world') + '\n\n'
   );
 
   it('should print a diff', function (done) {
@@ -72,7 +72,7 @@ describe('printDiff.inline', function () {
 
   var result = (
     '\n' + A('expected') + ' ' + R('actual') + '\n' +
-    '\n' + A('Linus') + R('I') + ' said hello' + '\n\n'
+    '\n' + R('I') + A('Linus') + ' said hello' + '\n\n'
   );
 
   it('should print a diff', function (done) {
