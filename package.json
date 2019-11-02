@@ -12,7 +12,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "diff": "^1.2.1"
+    "diff": "^4.0.1"
   },
   "devDependencies": {
     "mocha": "^2.1.0"
