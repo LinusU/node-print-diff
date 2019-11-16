@@ -4,6 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "repository": "LinusU/node-print-diff",
+  "files": [
+    "lib/",
+    "index.d.ts",
+    "index.js"
+  ],
   "scripts": {
     "test": "mocha"
   },
