@@ -2,19 +2,19 @@
   "name": "print-diff",
   "version": "0.1.1",
   "main": "index.js",
-  "author": "Linus Unnebäck <linus@folkdatorn.se>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/LinusU/node-print-diff.git"
-  },
+  "repository": "LinusU/node-print-diff",
   "scripts": {
     "test": "mocha"
   },
   "dependencies": {
-    "diff": "^1.2.1"
+    "diff": "^4.0.1"
   },
   "devDependencies": {
-    "mocha": "^2.1.0"
+    "get-stream": "^5.1.0",
+    "mocha": "^6.2.2"
+  },
+  "engines": {
+    "node": ">=8.3"
   }
 }
