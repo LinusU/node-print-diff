@@ -1,6 +1,6 @@
 {
   "name": "print-diff",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "repository": "LinusU/node-print-diff",
   "type": "module",
