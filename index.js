@@ -1,11 +1,4 @@
-const inline = require('./lib/inline')
-const unified = require('./lib/unified')
+import printInlineDiff from './lib/inline.js'
+import printUnifiedDiff from './lib/unified.js'
 
-function printDiff (actual, expected, out) {
-  unified.apply(this, arguments)
-}
-
-printDiff.inline = inline
-printDiff.unified = unified
-
-module.exports = printDiff
+export { printInlineDiff, printUnifiedDiff }

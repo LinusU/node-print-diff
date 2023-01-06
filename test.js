@@ -1,13 +1,13 @@
 /* eslint-env mocha */
 
-const assert = require('assert')
-const stream = require('stream')
-const getStream = require('get-stream')
+import assert from 'node:assert'
+import stream from 'node:stream'
+import getStream from 'get-stream'
 
-const printDiff = require('./')
-const color = require('./lib/color')
+import { printInlineDiff, printUnifiedDiff } from './index.js'
+import color from './lib/color.js'
 
-describe('printDiff.unified', function () {
+describe('printUnifiedDiff', function () {
   const result = (
     '\n' + color('added', '+ expected') + ' ' + color('removed', '- actual') + '\n' +
     '\n' + ' Hello\n' + color('removed', '-Linus') + '\n' + color('added', '+world') + '\n\n'
@@ -19,7 +19,7 @@ describe('printDiff.unified', function () {
     const actual = 'Hello\nLinus\n'
     const expected = 'Hello\nworld\n'
 
-    printDiff.unified(actual, expected, out)
+    printUnifiedDiff(actual, expected, out)
     out.end()
 
     assert.strictEqual(await getStream(out), result)
@@ -31,14 +31,14 @@ describe('printDiff.unified', function () {
     const actual = 'Hello\nLinus'
     const expected = 'Hello\nworld'
 
-    printDiff.unified(actual, expected, out)
+    printUnifiedDiff(actual, expected, out)
     out.end()
 
     assert.strictEqual(await getStream(out), result)
   })
 })
 
-describe('printDiff.inline', function () {
+describe('printInlineDiff', function () {
   const result = (
     '\n' + color('added', 'expected') + ' ' + color('removed', 'actual') + '\n' +
     '\n' + color('removed', 'I') + color('added', 'Linus') + ' said hello' + '\n\n'
@@ -50,7 +50,7 @@ describe('printDiff.inline', function () {
     const actual = 'I said hello\n'
     const expected = 'Linus said hello\n'
 
-    printDiff.inline(actual, expected, out)
+    printInlineDiff(actual, expected, out)
     out.end()
 
     assert.strictEqual(await getStream(out), result)
@@ -62,7 +62,7 @@ describe('printDiff.inline', function () {
     const actual = 'I said hello'
     const expected = 'Linus said hello'
 
-    printDiff.inline(actual, expected, out)
+    printInlineDiff(actual, expected, out)
     out.end()
 
     assert.strictEqual(await getStream(out), result)
