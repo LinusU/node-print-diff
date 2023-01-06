@@ -14,7 +14,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "diff": "^4.0.1"
+    "diff": "^5.1.0"
   },
   "devDependencies": {
     "get-stream": "^6.0.1",
